@@ -1,0 +1,53 @@
+.task--2 {
+    padding: 3rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    
+    .heading {
+        font-family: $font-primary;
+        line-height: 1;
+        text-align: center;
+
+        color: #f35626;
+
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 20s infinite linear;
+
+        display: none;
+
+        span {
+            text-transform: uppercase;
+            display: block;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            z-index: 1;
+
+            border-radius: 25px;
+            border: 2px dashed #fff;
+        }
+
+        &--lg {
+            font-size: 12rem;
+            @include lg {
+                display: block;
+            }
+        }
+
+        &--md {
+            font-size: 8rem;
+            @include md {
+                display: block;
+            }
+        }
+
+        &--sm {
+            font-size: 5rem;
+            @include sm {
+                display: block;
+            }
+        }
+    }
+}

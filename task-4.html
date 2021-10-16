@@ -1,0 +1,116 @@
+<!-- 
+Landing page: Create a new HTML page with the same design and behavior as this page 
+@https://fed-test.herokuapp.com/
+I attached the required images for building the pages, 
+also use Google fonts for the Open sans font: 
+@https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.css">
+	<title>Outbrain | Assignment | Task 4</title>
+</head>
+
+<body>
+	<nav class="navbar">
+        <div class="navbar__container">
+
+            <a href="#" class="navbar__logo">
+                <img src="./img/logo.svg" alt="">
+            </a>
+
+            <div class="navbar__menu">
+                <ul>
+                    <li>
+                        <a href="./task-1.html">Task 1</a>
+                    </li>
+                    <li>
+                        <a href="./task-2.html">Task 2</a>
+                    </li>
+                    <li>
+                        <a class="is-active" href="./task-3.html">Task 3</a>
+                    </li>
+                    <li>
+                        <a href="./task-4.html">Task 4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	<div class="task task--4">
+
+		<div class="app" id="app">
+
+			<!-- Form -->
+			<div class="app__form">
+				<h1 class="heading">
+					Enter your content URL below to see how it works
+				</h1>
+				<form action="" method="GET" id="form" class="form" validate>
+					<input type="url" class="form__input" id="input" placeholder="Enter your content URL here"
+						pattern="https://.*" required>
+					<input type="submit" class="form__submit" id="submit" value="GO!">
+				</form>
+			</div>
+
+			<!-- Display -->
+			<div class="display">
+				<div class="display__screen" id="screen">
+					<span class="display__screen__website"></span>
+					<span class="display__screen__widget"></span>
+
+					<span class="display__screen__img display__screen__img--default" 
+						  id="dynamicThumbnail"></span>
+
+					<div class="display__screen__title display__screen__title--1">
+						What you need to tell your kids about budgeting [Video]
+						<span>Better Money Habits</span>
+					</div>
+
+					<div class="display__screen__title display__screen__title--2">
+						The online furniture retailer that's shaking up the industry
+						<span>Macy's</span>
+					</div>
+
+					<div class="display__screen__title display__screen__title--3" id="dynamicTitle">
+						Your headline displayed here
+						<span id="dynamicUrl">Your domain</span>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- Interface -->
+			<ul class="interface is-hidden" id="interface">
+				<li class="interface__btn interface__btn--reset">
+					<a href="#" id="reset">
+						Try It Again
+					</a>
+				</li>
+				<li class="interface__btn interface__btn--cta">
+					<a href="https://www.outbrain.com/" target="_blank" id="promote">
+						Promote My Content
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+
+	<script src="./js/task-4.js"></script>
+</body>
+
+</html>

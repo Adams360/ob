@@ -1,0 +1,418 @@
+/* Media Queries */
+/* Font Family */
+/* Color Scheme */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #161718;
+}
+
+.task {
+  min-height: 100vh;
+}
+
+.navbar {
+  padding: 3rem;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  margin: 0 auto;
+}
+.navbar__logo {
+  flex: 0 0 10rem;
+}
+.navbar__logo img {
+  display: block;
+  max-width: 10rem;
+}
+.navbar__menu ul {
+  list-style: none;
+}
+.navbar__menu ul li {
+  display: inline-block;
+  color: #fff;
+  margin: 0 0 0 2.5rem;
+}
+.navbar__menu ul li a {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 400;
+}
+.navbar__menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1px;
+}
+.navbar__menu ul li a.is-active::after, .navbar__menu ul li a:active::after, .navbar__menu ul li a:visited::after {
+  background-color: deeppink;
+}
+
+.task--1 {
+  padding: 3rem;
+}
+.task--1 p {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(3rem, 3vw, 6rem);
+  font-weight: 100;
+  line-height: 1.3;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 20s infinite linear;
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+.task--2 {
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.task--2 .heading {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  text-align: center;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 20s infinite linear;
+  display: none;
+}
+.task--2 .heading span {
+  text-transform: uppercase;
+  display: block;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: 25px;
+  border: 2px dashed #fff;
+}
+.task--2 .heading--lg {
+  font-size: 12rem;
+}
+@media screen and (min-width: 1024px) {
+  .task--2 .heading--lg {
+    display: block;
+  }
+}
+.task--2 .heading--md {
+  font-size: 8rem;
+}
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .task--2 .heading--md {
+    display: block;
+  }
+}
+.task--2 .heading--sm {
+  font-size: 5rem;
+}
+@media screen and (max-width: 640px) {
+  .task--2 .heading--sm {
+    display: block;
+  }
+}
+
+.task--3 .app {
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  padding: 50px 0;
+}
+.task--3 .app__content {
+  flex: 1;
+  color: #fff;
+}
+.task--3 .app__content h1 {
+  font-size: 5rem;
+  margin: 0 0 2rem;
+}
+.task--3 .app__content p {
+  font-size: 2.4rem;
+  letter-spacing: 3px;
+}
+.task--3 .app__content button {
+  margin-top: auto;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  text-align: center;
+  background-color: #EE6513;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.task--3 .app__map {
+  position: relative;
+  flex: 1;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+.task--3 .app__map::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -20px;
+}
+.task--3 .app__map::after {
+  content: "?";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70rem;
+  color: #EE6513;
+}
+.task--3 .app__map img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.task--4 {
+  background-color: #0ca8ae;
+}
+.task--4 .app {
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+.task--4 .app.is-active {
+  transform: translateY(-145px);
+}
+.task--4 .app.is-active > .app__form {
+  opacity: 0;
+}
+.task--4 .app__form {
+  transition: opacity 0.3s ease-in-out;
+}
+.task--4 .app__form .heading {
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 3px #00838b;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 38px;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.task--4 .app__form .form {
+  position: relative;
+  height: 100px;
+  display: block;
+  width: 710px;
+  margin: 0 auto 0 auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.task--4 .app__form .form__input {
+  position: absolute;
+  display: inline-block;
+  height: 65px;
+  background-color: #ffffff;
+  border: solid 2px #02989d;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  color: #777d85;
+  width: 582px;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  border-radius: 4px;
+}
+.task--4 .app__form .form__submit {
+  right: 0;
+  top: 0;
+  height: 65px;
+  display: inline-block;
+  position: absolute;
+  width: 103px;
+  background-color: #f08421;
+  color: #ffffff;
+  border: solid 2px #a6e3e5;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 50px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.task--4 .app .display {
+  position: relative;
+  display: block;
+  height: 560px;
+  width: 962px;
+  margin: 0 auto;
+  padding: 42px 119px 100px 121px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/laptop-placeholder.png);
+  background-position: 0 0;
+}
+.task--4 .app .display__screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.task--4 .app .display__screen::after {
+  content: "";
+  position: absolute;
+  inset: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.task--4 .app .display__screen.is-loading::after {
+  opacity: 1;
+}
+.task--4 .app .display__screen__website {
+  background-image: url(../../img/laptop-content-cnn.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.task--4 .app .display__screen__widget {
+  background-image: url(../../img/laptop-content-static.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 57px;
+  top: 183px;
+  width: 406px;
+  height: 118px;
+}
+.task--4 .app .display__screen__img {
+  position: absolute;
+  left: 483px;
+  top: 183px;
+  width: 192px;
+  height: 117px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 1;
+}
+.task--4 .app .display__screen__img--default {
+  background-image: url(../../img/desktop-content-image.png);
+  transition: opacity 0.3s ease;
+}
+.task--4 .app .display__screen__img--loading {
+  background-color: #f08421;
+  background-image: url(../../img/preloader.gif);
+  transition: opacity 0.3s ease;
+}
+.task--4 .app .display__screen__title {
+  position: absolute;
+  top: 305px;
+  width: 194px;
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: bold;
+  color: #0c0c0c;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.task--4 .app .display__screen__title--1 {
+  left: 57px;
+}
+.task--4 .app .display__screen__title--2 {
+  left: 269px;
+}
+.task--4 .app .display__screen__title--3 {
+  left: 483px;
+}
+.task--4 .interface {
+  position: relative;
+  list-style: none;
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.task--4 .interface.is-hidden {
+  opacity: 0;
+  transform: translateY(-150px);
+  pointer-events: none;
+}
+.task--4 .interface__btn {
+  flex: 1;
+  height: 100%;
+}
+.task--4 .interface__btn a {
+  display: block;
+  margin: 0 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: capitalize;
+  font-family: Arial;
+}
+.task--4 .interface__btn--cta a {
+  color: #fff;
+  background-color: #f08421;
+}
+.task--4 .interface__btn--reset a {
+  color: #0ca8ae;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=styles.css.map */

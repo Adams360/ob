@@ -1,0 +1,75 @@
+<!-- 
+JSON Objects: Create a JSON file that fits this story:
+
+Steve Fisher lives in New York City, Steve is married to Mary and they both have three kids 2 boys and a girl, John, Will and Michelle.
+John is 8, Will is 4 and Michelle is 2 years old.
+Steve works at MTV as a marketing director, he has been working there for the past 6 years.
+The fishers have 4 pets: dog, cat, fish, hamster.
+
+Here is a beginning of the JSON to understand the idea:
+
+{
+	name:{
+		first: “Steve”,
+		last: “Fisher”
+}
+	….
+}
+
+Create an empty HTML page and use Javascript to inject the previous story using the JSON file for all the dynamic properties, for example I would like the code to display:
+
+name.first + “ “ + name.last+’’ lives in ”+address…..
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Outbrain | Assignment | Task 1</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+
+            <a href="#" class="navbar__logo">
+                <img src="./img/logo.svg" alt="">
+            </a>
+
+            <div class="navbar__menu">
+                <ul>
+                    <li>
+                        <a class="is-active" href="./task-1.html">Task 1</a>
+                    </li>
+                    <li>
+                        <a href="./task-2.html">Task 2</a>
+                    </li>
+                    <li>
+                        <a href="./task-3.html">Task 3</a>
+                    </li>
+                    <li>
+                        <a href="./task-4.html">Task 4</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="task task--1">
+        <p>
+            <!-- Content injected here -->
+        </p>
+    </div>
+
+
+    <script src="./js/task-1.js"></script>
+</body>
+
+</html>

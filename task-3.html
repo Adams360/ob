@@ -1,0 +1,76 @@
+<!-- 
+jQuery Library: Create page that returns details on your location using the free service: http://ip-api.com/json/ and the jQuery library
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Outbrain | Assignment | Task 3</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+
+            <a href="#" class="navbar__logo">
+                <img src="./img/logo.svg" alt="">
+            </a>
+
+            <div class="navbar__menu">
+                <ul>
+                    <li>
+                        <a href="./task-1.html">Task 1</a>
+                    </li>
+                    <li>
+                        <a href="./task-2.html">Task 2</a>
+                    </li>
+                    <li>
+                        <a class="is-active" href="./task-3.html">Task 3</a>
+                    </li>
+                    <li>
+                        <a href="./task-4.html">Task 4</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="task task--3">
+
+        <div class="app" id="app">
+
+            <div class="app__content" data-content="start">
+
+                <h1>IP Geolocation API</h1>
+
+                <p>
+                  Fast, accurate, reliable
+                </p>
+
+                <button type="button">
+                    Find my location
+                </button>
+
+            </div>
+
+            <div class="app__map">
+                <img src="https://cache.ip-api.com/34.7649,32.0668,10" alt="Your location">
+            </div>
+
+            <div class="frosted-glass"></div>
+
+        </div>
+
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/task-3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{
+    "name": {
+        "first": "steve",
+        "last": "fisher"
+    },
+    "address": {
+        "city": "new york"
+    },
+    "status": "married",
+    "partner": {
+        "name": "mary"
+    },
+    "kids": {
+        "number": 3,
+        "boys": {
+            "number": 2,
+            "names": {
+                "john": {
+                    "age": 8
+                },
+                "will": {
+                    "age": 4
+                }
+            }
+        },
+        "girls": {
+            "number": 1,
+            "names": {
+                "michelle": {
+                    "age": 2
+                }
+            }
+        }
+    },
+    "job": {
+        "location": "mtv",
+        "position": "marketing director",
+        "periodInMonths": 72
+    },
+    "pets": ["dog", "cat", "fish", "hamster"]
+}
