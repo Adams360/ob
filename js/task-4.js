@@ -9,12 +9,9 @@ const app = document.querySelector("#app"),
       reset = document.querySelector('#reset');
 
 
-
-
-      
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     if (urlInput.value.length > 3) {
         const data = { key: "1bfd21498cd9615b5eeb86e0d3b09e6d", q: '' };
         data.q = urlInput.value;

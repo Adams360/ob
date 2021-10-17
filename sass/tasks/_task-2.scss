@@ -2,10 +2,9 @@
     padding: 3rem;
     display: grid;
     place-items: center;
-    overflow: hidden;
     
     .heading {
-        font-family: $font-primary;
+        font-family: $font-secondary;
         line-height: 1;
         text-align: center;
 
@@ -30,7 +29,7 @@
         }
 
         &--lg {
-            font-size: 12rem;
+            font-size: 10rem;
             @include lg {
                 display: block;
             }

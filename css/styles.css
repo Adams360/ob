@@ -70,6 +70,7 @@ body {
 
 .task--1 {
   padding: 3rem;
+  overflow: hidden;
 }
 .task--1 p {
   font-family: "Open Sans", sans-serif;
@@ -95,10 +96,9 @@ body {
   padding: 3rem;
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
 .task--2 .heading {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Karla", sans-serif;
   line-height: 1;
   text-align: center;
   color: #f35626;
@@ -118,7 +118,7 @@ body {
   border: 2px dashed #fff;
 }
 .task--2 .heading--lg {
-  font-size: 12rem;
+  font-size: 10rem;
 }
 @media screen and (min-width: 1024px) {
   .task--2 .heading--lg {
@@ -143,77 +143,169 @@ body {
 }
 
 .task--3 .app {
-  font-family: Helvetica, sans-serif;
+  font-family: "Karla", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 10rem 0 0;
+}
+@media screen and (max-width: 640px) {
+  .task--3 .app {
+    padding: 6em 0 0;
+  }
+}
+.task--3 .app__container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
-  padding: 50px 0;
+}
+@media screen and (max-width: 640px) {
+  .task--3 .app__container {
+    flex-direction: column;
+  }
 }
 .task--3 .app__content {
   flex: 1;
-  color: #fff;
+  font-weight: 700;
+  padding: 0 5rem 0 0;
+  color: #2B2839;
+}
+@media screen and (max-width: 640px) {
+  .task--3 .app__content {
+    padding: 0 5rem 5rem;
+    text-align: center;
+  }
+}
+.task--3 .app__content .logo {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: inherit;
+  text-transform: capitalize;
+  color: inherit;
+  text-decoration: none;
+  font-size: 2.2rem;
+  margin: 0 0 8rem;
+}
+.task--3 .app__content .logo__icon, .task--3 .app__content .logo__line {
+  position: absolute;
+  z-index: -1;
+}
+.task--3 .app__content .logo__icon {
+  right: -53px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+}
+.task--3 .app__content .logo__line {
+  bottom: -15px;
+  left: -4px;
 }
 .task--3 .app__content h1 {
   font-size: 5rem;
-  margin: 0 0 2rem;
+  line-height: 50px;
+  margin: 0 0 3rem;
+  max-width: 50rem;
 }
 .task--3 .app__content p {
   font-size: 2.4rem;
-  letter-spacing: 3px;
+  margin: 0 0 6rem;
+  max-width: 40rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 640px) {
+  .task--3 .app__content p {
+    margin: 0 auto 6rem;
+  }
 }
 .task--3 .app__content button {
-  margin-top: auto;
-  display: inline-block;
-  cursor: pointer;
+  display: block;
   -webkit-appearance: none;
   appearance: none;
   border: 0;
+  font-family: inherit;
+  font-size: 2.4rem;
+  line-height: 1;
   text-align: center;
-  background-color: #EE6513;
-  padding: 1.5rem 3rem;
-  border-radius: 5px;
-  font-size: 2.8rem;
-  text-transform: uppercase;
+  background-color: #5035FF;
   color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.task--3 .app__map {
-  position: relative;
+.task--3 .app__content button svg {
+  margin: 0 0 0 2rem;
+}
+@media screen and (max-width: 640px) {
+  .task--3 .app__content button {
+    width: 100%;
+  }
+}
+.task--3 .app__results {
   flex: 1;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
 }
-.task--3 .app__map::before {
-  content: "";
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: -20px;
-}
-.task--3 .app__map::after {
-  content: "?";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 70rem;
-  color: #EE6513;
-}
-.task--3 .app__map img {
+.task--3 .app__results .card {
+  position: relative;
   display: block;
+  background-color: #DDEBF8;
+  border-radius: 10px;
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.task--3 .app__results .card__content {
+  background: linear-gradient(to top, rgba(231, 164, 208, 0.8), rgba(255, 255, 255, 0.6));
   width: 100%;
   height: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.task--3 .app__results .card__content ul {
+  list-style: none;
+  text-align: center;
+}
+.task--3 .app__results .card__content ul li {
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  color: #2B2839;
+}
+.task--3 .app__results .card__content ul li span {
+  font-style: italic;
+  font-weight: 700;
+  display: block;
+  margin: 10px 0 0;
+  font-size: 3rem;
+}
+.task--3 .app__results .card .card-shape {
+  opacity: 0.8;
+  transform: translateY(4rem) scale(0.9);
+  animation: card-shape 4s ease-in-out infinite alternate-reverse;
+}
+@keyframes card-shape {
+  25% {
+    transform: translateY(8rem) scale(0.6) rotate(6deg);
+  }
+  75% {
+    transform: translateY(-8rem) scale(0.7) rotate(-6deg);
+  }
+  100% {
+    transform: translateY(6rem) scale(0.7);
+    opacity: 0.4;
+  }
+}
 .task--4 {
   background-color: #0ca8ae;
 }
