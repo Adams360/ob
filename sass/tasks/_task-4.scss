@@ -85,7 +85,7 @@
 
             padding: 42px 119px 100px 121px;
             background-repeat: no-repeat;
-            background-image: url(../../img/laptop-placeholder.png);
+            background-image: url(../../assets/img/laptop-placeholder.png);
             background-position: 0 0;
 
             &__screen {
@@ -113,7 +113,7 @@
                 }
 
                 &__website {
-                    background-image: url(../../img/laptop-content-cnn.png);
+                    background-image: url(../../assets/img/laptop-content-cnn.png);
                     background-position: 0 0;
                     background-repeat: no-repeat;
                     background-size: 100% auto;
@@ -125,7 +125,7 @@
                 }
 
                 &__widget {
-                    background-image: url(../../img/laptop-content-static.png);
+                    background-image: url(../../assets/img/laptop-content-static.png);
                     background-position: 0 0;
                     background-repeat: no-repeat;
                     position: absolute;
@@ -148,13 +148,13 @@
                     opacity: 1;
 
                     &--default {
-                        background-image: url(../../img/desktop-content-image.png);
+                        background-image: url(../../assets/img/desktop-content-image.png);
                         transition: opacity 0.3s ease;
                     }
 
                     &--loading {
                         background-color: #f08421;
-                        background-image: url(../../img/preloader.gif);
+                        background-image: url(../../assets/img/preloader.gif);
                         transition: opacity 0.3s ease;
                     }
                 }

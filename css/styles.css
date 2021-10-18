@@ -78,6 +78,8 @@ body {
   font-weight: 100;
   line-height: 1.3;
   color: #f35626;
+}
+.task--1 p strong {
   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,169 +145,216 @@ body {
 }
 
 .task--3 .app {
+  height: 100vh;
+  padding: 0 5vw;
+  background: linear-gradient(116.87deg, rgba(255, 175, 167, 0.7), rgba(254, 251, 238, 0.7));
   font-family: "Karla", sans-serif;
-  background-color: #fff;
-  min-height: 100vh;
-  padding: 10rem 0 0;
-}
-@media screen and (max-width: 640px) {
-  .task--3 .app {
-    padding: 6em 0 0;
-  }
+  color: #2b2839;
 }
 .task--3 .app__container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-}
-@media screen and (max-width: 640px) {
-  .task--3 .app__container {
-    flex-direction: column;
-  }
-}
-.task--3 .app__content {
-  flex: 1;
-  font-weight: 700;
-  padding: 0 5rem 0 0;
-  color: #2B2839;
-}
-@media screen and (max-width: 640px) {
-  .task--3 .app__content {
-    padding: 0 5rem 5rem;
-    text-align: center;
-  }
-}
-.task--3 .app__content .logo {
   position: relative;
-  z-index: 1;
-  display: inline-block;
-  font-family: inherit;
-  text-transform: capitalize;
-  color: inherit;
-  text-decoration: none;
-  font-size: 2.2rem;
-  margin: 0 0 8rem;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 100;
+  display: grid;
+  place-items: center;
 }
-.task--3 .app__content .logo__icon, .task--3 .app__content .logo__line {
-  position: absolute;
-  z-index: -1;
+.task--3 .app__logo {
+  justify-self: flex-start;
 }
-.task--3 .app__content .logo__icon {
-  right: -53px;
-  top: -20px;
-  width: 50px;
-  height: 50px;
+.task--3 .app .placeholder {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  min-height: 750px;
+  border: 5px solid #2b2839;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 180, 162, 0.7) 0%, rgba(254, 251, 238, 0.392) 100%);
 }
-.task--3 .app__content .logo__line {
-  bottom: -15px;
-  left: -4px;
+.task--3 .app .placeholder__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out;
 }
-.task--3 .app__content h1 {
-  font-size: 5rem;
-  line-height: 50px;
-  margin: 0 0 3rem;
-  max-width: 50rem;
-}
-.task--3 .app__content p {
-  font-size: 2.4rem;
-  margin: 0 0 6rem;
-  max-width: 40rem;
-  font-weight: 400;
-}
-@media screen and (max-width: 640px) {
-  .task--3 .app__content p {
-    margin: 0 auto 6rem;
+@media screen and (max-width: 992px) {
+  .task--3 .app .placeholder__content {
+    justify-content: flex-start;
+    padding: 5rem 3rem 1rem;
   }
 }
-.task--3 .app__content button {
+.task--3 .app .placeholder__content h1 {
+  display: block;
+  text-align: center;
+  font-size: clamp(38px, 3vw, 62px);
+  line-height: clamp(38px, 3vw, 62px);
+  font-weight: 700;
+  max-width: 484px;
+  margin: 0 auto 4.7rem;
+}
+.task--3 .app .placeholder__content p {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  text-align: center;
+  max-width: 484px;
+  margin: 0 auto 7rem;
+}
+.task--3 .app .placeholder__content button {
   display: block;
   -webkit-appearance: none;
   appearance: none;
   border: 0;
-  font-family: inherit;
-  font-size: 2.4rem;
+  min-width: 330px;
+  margin: 0 auto;
+  min-height: 100px;
   line-height: 1;
-  text-align: center;
-  background-color: #5035FF;
+  background: #2b2839;
   color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 32px;
   cursor: pointer;
+}
+.task--3 .app .placeholder__results {
+  flex: 1;
+  background: rgba(255, 180, 162, 0.7);
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  width: 50%;
+  right: 0;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
 }
-.task--3 .app__content button svg {
-  margin: 0 0 0 2rem;
-}
-@media screen and (max-width: 640px) {
-  .task--3 .app__content button {
+@media screen and (max-width: 992px) {
+  .task--3 .app .placeholder__results {
     width: 100%;
+    height: 78%;
+    background: #ffb4a2;
   }
 }
-.task--3 .app__results {
-  flex: 1;
-}
-.task--3 .app__results .card {
-  position: relative;
-  display: block;
-  background-color: #DDEBF8;
-  border-radius: 10px;
-  height: 100%;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.task--3 .app__results .card__content {
-  background: linear-gradient(to top, rgba(231, 164, 208, 0.8), rgba(255, 255, 255, 0.6));
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  border-radius: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.task--3 .app__results .card__content ul {
+.task--3 .app .placeholder__results ul {
   list-style: none;
-  text-align: center;
 }
-.task--3 .app__results .card__content ul li {
-  font-size: 3rem;
-  margin: 0 0 3rem;
-  color: #2B2839;
+.task--3 .app .placeholder__results ul li {
+  display: block;
+  font-size: 30px;
+  line-height: 60px;
+  font-weight: 400;
+  transform: translateX(300%);
+  opacity: 0;
+  animation: slide-in 0.3s 0.2s ease-in-out forwards;
 }
-.task--3 .app__results .card__content ul li span {
-  font-style: italic;
+.task--3 .app .placeholder__results ul li span {
+  font-size: 55px;
   font-weight: 700;
   display: block;
-  margin: 10px 0 0;
-  font-size: 3rem;
 }
-.task--3 .app__results .card .card-shape {
+.task--3 .app .placeholder .icon {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: 30%;
+  animation: float-shapes 10s ease infinite alternate-reverse;
   opacity: 0.8;
-  transform: translateY(4rem) scale(0.9);
-  animation: card-shape 4s ease-in-out infinite alternate-reverse;
+  transition: opacity 0.4s ease-in-out;
 }
-@keyframes card-shape {
-  25% {
-    transform: translateY(8rem) scale(0.6) rotate(6deg);
+.task--3 .app .placeholder .icon--map {
+  left: 12rem;
+}
+.task--3 .app .placeholder .icon--search {
+  right: 12rem;
+  animation-delay: 0.5s;
+}
+@media screen and (max-width: 992px) {
+  .task--3 .app .placeholder .icon {
+    opacity: 0.4;
+    width: 15rem;
+    height: 15rem;
+    top: initial;
   }
-  75% {
-    transform: translateY(-8rem) scale(0.7) rotate(-6deg);
+  .task--3 .app .placeholder .icon--map {
+    left: 3rem;
+    bottom: 3rem;
+  }
+  .task--3 .app .placeholder .icon--search {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+.task--3 .app .placeholder[data-state=results] .icon {
+  opacity: 0;
+}
+.task--3 .app .placeholder[data-state=results] .placeholder__content {
+  transform: translateX(-25%);
+}
+@media screen and (max-width: 992px) {
+  .task--3 .app .placeholder[data-state=results] .placeholder__content {
+    transform: translatey(45%);
+  }
+}
+.task--3 .app .placeholder[data-state=results] .placeholder__results {
+  transform: translateX(0%);
+}
+.task--3 .app .placeholder[data-state=results] .placeholder__results ul li {
+  animation-play-state: running;
+}
+.task--3 .app::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 500%;
+  opacity: 0.5;
+  background-color: white;
+  background-image: url(../../assets/img/world.svg);
+  background-repeat: repeat;
+  animation-name: sideupscroll;
+  animation-duration: 240s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes sideupscroll {
+  0% {
+    transform: translateX(0%);
   }
   100% {
-    transform: translateY(6rem) scale(0.7);
-    opacity: 0.4;
+    transform: translateX(-100%);
   }
 }
+@keyframes float-shapes {
+  25% {
+    transform: scale(1) translate(1rem, 2rem);
+  }
+  50% {
+    transform: scale(0.9) translate(-1rem, -1rem);
+  }
+  100% {
+    transform: scale(1) translate(0rem, 0rem);
+  }
+}
+@keyframes slide-in {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .task--4 {
   background-color: #0ca8ae;
 }
@@ -385,7 +434,7 @@ body {
   margin: 0 auto;
   padding: 42px 119px 100px 121px;
   background-repeat: no-repeat;
-  background-image: url(../../img/laptop-placeholder.png);
+  background-image: url(../../assets/img/laptop-placeholder.png);
   background-position: 0 0;
 }
 .task--4 .app .display__screen {
@@ -408,7 +457,7 @@ body {
   opacity: 1;
 }
 .task--4 .app .display__screen__website {
-  background-image: url(../../img/laptop-content-cnn.png);
+  background-image: url(../../assets/img/laptop-content-cnn.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -419,7 +468,7 @@ body {
   height: 100%;
 }
 .task--4 .app .display__screen__widget {
-  background-image: url(../../img/laptop-content-static.png);
+  background-image: url(../../assets/img/laptop-content-static.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   position: absolute;
@@ -440,12 +489,12 @@ body {
   opacity: 1;
 }
 .task--4 .app .display__screen__img--default {
-  background-image: url(../../img/desktop-content-image.png);
+  background-image: url(../../assets/img/desktop-content-image.png);
   transition: opacity 0.3s ease;
 }
 .task--4 .app .display__screen__img--loading {
   background-color: #f08421;
-  background-image: url(../../img/preloader.gif);
+  background-image: url(../../assets/img/preloader.gif);
   transition: opacity 0.3s ease;
 }
 .task--4 .app .display__screen__title {

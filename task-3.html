@@ -1,5 +1,8 @@
 <!-- 
-jQuery Library: Create page that returns details on your location using the free service: http://ip-api.com/json/ and the jQuery library
+jQuery Library: 
+Create page that returns details on your location 
+using the free service: http://ip-api.com/json/ 
+and the jQuery library
  -->
 
 <!DOCTYPE html>
@@ -22,97 +25,62 @@ jQuery Library: Create page that returns details on your location using the free
         <div class="app" id="app">
 
             <div class="app__container">
+                <a href="#" class="app__logo">
+                    <img src="./assets/img/logo.svg" alt="">
+                </a>
 
-                <div class="app__content">
+                <section class="placeholder" id="placeholder" data-state="start">
 
-                    <a href="#" class="logo">
-                        <svg width="69" height="85" viewBox="0 0 69 85" fill="none" class="logo__icon">
-                            <path
-                                d="M62.0165 38.4438C65.6948 24.7164 57.5498 10.6055 43.8213 6.92699C30.0949 3.24901 15.9857 11.3969 12.3074 25.1243C10.4468 32.0681 11.3721 40.7686 14.1363 48.0875L24.8556 77.7161L48.9588 57.4134C56.2181 51.315 60.1571 45.3833 62.0165 38.4438Z"
-                                fill="#2B2839" />
-                            <circle cx="37.3325" cy="31.148" r="11.5677" transform="rotate(15 37.3325 31.148)"
-                                fill="#F3D1E7" />
-                        </svg>
-
-                        Location Tracker
-
-                        <svg width="189" height="17" viewBox="0 0 189 17" fill="none" class="logo__line">
-                            <path opacity="0.5"
-                                d="M2 11.4247C15.2187 8.08387 28.9657 6.98706 42.4409 6.1938C65.031 4.86398 87.7917 4.54593 110.378 6.07492C130.612 7.44468 150.573 10.7405 170.788 7.97708C175.965 7.26948 182.949 7.14488 188.049 7.14488"
-                                stroke="#E7A4D0" stroke-width="10" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-
-
-                    <h1>
-                        Want to find out
-                        where you are?
-                    </h1>
-                    <p>
-                        Click on the button below
-                        to see details on your location
-                    </p>
-
-                    <button type="button">
-                        Find Location
-                        <svg width="15" height="35" viewBox="0 0 22 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.81025 0.599192C2.9091 0.500588 3.02642 0.422435 3.1555 0.3692C3.28457 0.315965 3.42288 0.288693 3.5625 0.288942H18.4375C18.7193 0.288942 18.9895 0.400884 19.1888 0.600141C19.3881 0.799399 19.5 1.06965 19.5 1.35144C19.5 2.79644 18.7733 3.84619 18.1273 4.49432C17.8595 4.75994 17.596 4.97032 17.375 5.12757V14.5434L17.5408 14.6454C17.9721 14.9153 18.5523 15.3127 19.1366 15.8248C20.265 16.8108 21.625 18.4088 21.625 20.4764C21.625 20.7582 21.5131 21.0285 21.3138 21.2277C21.1145 21.427 20.8443 21.5389 20.5625 21.5389H12.0625V31.1014C12.0625 31.6879 11.5865 34.2889 11 34.2889C10.4135 34.2889 9.9375 31.6879 9.9375 31.1014V21.5389H1.4375C1.15571 21.5389 0.885457 21.427 0.686199 21.2277C0.486942 21.0285 0.375 20.7582 0.375 20.4764C0.375 18.4088 1.735 16.8108 2.86125 15.8248C3.41099 15.3475 4.00112 14.9187 4.625 14.5434V5.12757C4.35703 4.93783 4.1054 4.72601 3.87275 4.49432C3.22675 3.84619 2.5 2.79432 2.5 1.35144C2.49975 1.21182 2.52702 1.07352 2.58026 0.94444C2.63349 0.815363 2.71165 0.698045 2.81025 0.599192V0.599192ZM6.16775 3.59119L6.1635 3.58907L6.16775 3.59119ZM6.1635 3.58907L6.16775 3.59119C6.3429 3.67994 6.49002 3.81549 6.5928 3.98279C6.69559 4.15009 6.75 4.34259 6.75 4.53894V15.1639C6.74999 15.3611 6.69513 15.5544 6.59155 15.7221C6.48797 15.8899 6.33976 16.0255 6.1635 16.1138H6.15925L6.13375 16.1287L6.019 16.1924C5.39249 16.5419 4.8036 16.9549 4.26162 17.4249C3.58588 18.0157 3.0185 18.6914 2.721 19.4139H19.279C18.9815 18.6914 18.4141 18.0157 17.7384 17.4249C17.1634 16.9259 16.5357 16.4913 15.8662 16.1287L15.8407 16.1159H15.8365C15.6599 16.0275 15.5115 15.8915 15.4079 15.7233C15.3043 15.5552 15.2496 15.3615 15.25 15.1639V4.53894C15.2492 4.33347 15.308 4.13218 15.4192 3.95944C15.5305 3.78671 15.6895 3.64993 15.8769 3.56569C16.1486 3.40567 16.3992 3.2122 16.6227 2.98982C16.7927 2.81982 16.9521 2.62857 17.0775 2.41394H4.9225C5.05 2.62644 5.20513 2.81982 5.37725 2.98982C5.61199 3.2231 5.87633 3.42457 6.1635 3.58907Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="app__results">
-
-                    <div class="card">
-
-
-                        <div class="card__content">
-                            <ul>
-                                <li id="city">
-                                    City: <span></span>
-                                </li>
-                                <li id="region">
-                                    Region: <span></span>
-                                </li>
-                                <li id="country">
-                                    Country: <span></span>
-                                </li>
-                                <li id="continent">
-                                    Continent: <span></span>
-                                </li>
-                            </ul>
-                        </div>
-
-
-
-                        <svg width="208" height="239" viewBox="0 0 208 239" fill="none" class="card-shape card-shape__mark">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M13.7149 95.009C5.99357 95.009 -0.259626 88.5654 0.936639 80.9528C8.41329 34.7063 43.6487 0.993408 104.794 0.993408C165.967 0.993408 207.211 37.9689 207.211 88.4023C207.211 124.943 189.131 150.608 158.545 169.232C128.638 187.149 120.101 199.628 120.101 223.879V224.695C120.101 228.3 118.669 231.758 116.119 234.307C113.57 236.857 110.112 238.289 106.507 238.289H85.5724C81.9905 238.289 78.5533 236.876 76.0078 234.355C73.4623 231.835 72.0143 228.413 71.9785 224.831L71.8969 219.393C70.7278 186.197 84.8655 164.99 116.621 145.66C144.624 128.477 154.602 114.802 154.602 90.523C154.602 63.9061 133.994 44.358 102.239 44.358C74.806 44.358 55.7473 58.7404 49.5485 82.4754C47.7541 89.3811 41.9903 95.009 34.8671 95.009H13.7421H13.7149Z"
-                                fill="white" />
-                        </svg>
-
-                        <svg width="130" height="227" viewBox="0 0 130 227" fill="none" class="card-shape card-shape__pin">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M0.980724 65.111C0.981873 52.7167 4.5379 40.586 11.2221 30.1744C17.9063 19.7629 27.4348 11.5128 38.6642 6.41407C49.8935 1.31536 62.3468 -0.415348 74.5296 1.4296C86.7125 3.27456 98.1074 8.6168 107.347 16.8153C116.587 25.0138 123.279 35.7203 126.62 47.6501C129.961 59.5799 129.81 72.2263 126.184 84.0717C122.558 95.9171 115.612 106.458 106.179 114.431C96.7454 122.403 85.2259 127.468 73.0025 129.017V218.073C73.0025 220.208 72.1594 222.256 70.6586 223.766C69.1579 225.275 67.1224 226.123 65 226.123C62.8777 226.123 60.8422 225.275 59.3415 223.766C57.8407 222.256 56.9976 220.208 56.9976 218.073V129.033C41.5204 127.071 27.2877 119.492 16.973 107.719C6.6583 95.9455 0.97147 80.7885 0.980724 65.0949V65.111Z"
-                                fill="white" />
-                        </svg>
-
-
+                    <div class="placeholder__content">
+                        <h1>
+                            Want to find out 
+                            where you are?
+                        </h1>
+    
+                        <p>
+                            Click on the button below
+                            to see details on your location 
+                        </p>
+    
+                        <button>Find Location</button>
                     </div>
 
-                </div>
+                    <div class="placeholder__results">
+                        <ul>
+                            <li id="city">
+                                City:
+                                <span>Herzliya</span>
+                            </li>
+
+                            <li id="region">
+                                Region:
+                                <span>Tel Aviv</span>
+                            </li>
+
+                            <li id="country">
+                                Country:
+                                <span>Israel</span>
+                            </li>
+
+                            <li id="continent">
+                                Continet:
+                                <span>Asia</span>
+                            </li>
+
+                        </ul>
+                    </div>
+ 
 
 
+                    <!-- Map Icon -->
+                    <img src="./assets/img/map-icon.svg" class="icon icon--map" alt="">
+                    <!-- Search Icon -->
+                    <img src="./assets/img/search-icon.svg" class="icon icon--search" alt="">
+                
+                </section>
             </div>
-
-            <!-- Video -->
-            <!-- <video id="video" class="app__video" poster="./assets/img/poster.jpg" autoplay muted loop>
-                <source src="./assets/video/map.mp4" type="video/mp4">
-            </video> -->
-
-
+   
+            
         </div>
 
 

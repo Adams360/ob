@@ -1,191 +1,257 @@
 .task--3 {
     .app {
+        height: 100vh;
+        padding: 0 5vw;
+        background: linear-gradient(116.87deg, rgba(255, 175, 167, 0.7), rgba(254, 251, 238, 0.7));
         font-family: $font-secondary;
-        background-color: $brand-light;
-        min-height: 100vh;
-
-        padding: 10rem 0 0;
-        @include sm {
-            padding: 6em 0 0;
-        }
+        color: #2b2839;
 
         &__container {
-            width: 100%;
+            position: relative;
             max-width: 1440px;
+            height: 100%;
             margin: 0 auto;
-            padding: 0 15px;
+            z-index: 100;
+
+            display: grid;
+            place-items: center;
+        }
+
+        &__logo {
+            justify-self: flex-start;
+        }
+
+        .placeholder {
+            position: relative;
+            z-index: 100;
+            width: 100%;
+            min-height: 750px;
+
+            border: 5px solid #2b2839;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
 
             display: flex;
+            justify-content: center;
+            overflow: hidden;
 
-            @include sm {
+            background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(255, 180, 162, 0.7) 0%,
+                rgba(254, 251, 238, 0.392) 100%
+            );
+
+            &__content {
+                flex: 1;
+
+                display: flex;
                 flex-direction: column;
-            }
-        }
+                align-items: center;
+                justify-content: center;
 
-        &__content {
-            flex: 1;
-            font-weight: 700;
-            padding: 0 5rem 0 0;
-            color: $brand-300;
-            @include sm {
-                padding: 0 5rem 5rem;
+                transition: transform 0.4s ease-in-out;
+
+                @media screen and (max-width: 992px) {
+                    justify-content: flex-start;
+                    padding: 5rem 3rem 1rem;
+                }
+
+                h1 {
+                    display: block;
+                    text-align: center;
+                    font-size: clamp(38px, 3vw, 62px);
+                    line-height: clamp(38px, 3vw, 62px);
+                    font-weight: 700;
+
+                    max-width: 484px;
+                    margin: 0 auto 4.7rem;
+                }
+
+                p {
+                    font-size: 28px;
+                    font-weight: 500;
+                    line-height: 33px;
+                    text-align: center;
+                    max-width: 484px;
+                    margin: 0 auto 7rem;
+                }
+
+                button {
+                    display: block;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    border: 0;
+                    min-width: 330px;
+                    margin: 0 auto;
+                    min-height: 100px;
+                    line-height: 1;
+                    background: #2b2839;
+                    color: #fff;
+                    border-radius: 15px;
+                    text-transform: uppercase;
+                    font-family: inherit;
+                    font-size: 32px;
+                    cursor: pointer;
+                }
+            }
+
+            &__results {
+                flex: 1;
+                background: rgba(255, 180, 162, 0.7);
                 text-align: center;
-            }
-
-            .logo {
-                position: relative;
-                z-index: 1;
-                display: inline-block;
-                font-family: inherit;
-                text-transform: capitalize;
-                color: inherit;
-                text-decoration: none;
-                font-size: 2.2rem;
-                margin: 0 0 8rem;
-
-                &__icon,
-                &__line {
-                    position: absolute;
-                    z-index: -1;
-                }
-
-                &__icon {
-                    right: -53px;
-                    top: -20px;
-                    width: 50px;
-                    height: 50px;
-                }
-                &__line {
-                    bottom: -15px;
-                    left: -4px;
-                }
-            }
-
-            h1 {
-                font-size: 5rem;
-                line-height: 50px;
-                margin: 0 0 3rem;
-                max-width: 50rem;
-            }
-
-            p {
-                font-size: 2.4rem;
-                margin: 0 0 6rem;
-                max-width: 40rem;
-                font-weight: 400;
-
-                @include sm {
-                    margin: 0 auto 6rem;
-                }
-            }
-
-            button {
-                display: block;
-                -webkit-appearance: none;
-                appearance: none;
-                border: 0;
-                font-family: inherit;
-                font-size: 2.4rem;
-                line-height: 1;
-                text-align: center;
-                background-color: $brand-200;
-                color: $brand-light;
-                padding: 2rem;
-                border-radius: 10px;
-                cursor: pointer;
-
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                svg {
-                    margin: 0 0 0 2rem;
-                }
-
-                @include sm {
-                    width: 100%;
-                }
-            }
-        }
-
-        &__results {
-            flex: 1;
-
-            .card {
-                position: relative;
-                display: block;
-                background-color: $brand-100;
-                border-radius: 10px;
+                position: absolute;
+                width: 50%;
+                right: 0;
                 height: 100%;
-                min-height: 500px;
+                transform: translateX(100%);
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                transition: transform 0.4s ease-in-out;
 
-                &__content {
-                    background: linear-gradient(to top, 
-                                rgba($brand-400, .8), rgba($brand-light, .6));
+                @media screen and (max-width: 992px) {
                     width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    z-index: 100;
-                    border-radius: inherit;
+                    height: 78%;
+                    background: rgba(255, 180, 162, 1);
+                }
 
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                ul {
+                    list-style: none;
+                    li {
+                        display: block;
+                        font-size: 30px;
+                        line-height: 60px;
+                        font-weight: 400;
 
-                    ul {
-                        list-style: none;
-                        text-align: center;
+                        transform: translateX(300%);
+                        opacity: 0;
 
-                        li {
-                            font-size: 3rem;
-                            margin: 0 0 3rem;
-                            color: $brand-300;
-
-                            span {
-                                font-style: italic;
-                                font-weight: 700;
-                                display: block;
-                                margin: 10px 0 0;
-                                font-size: 3rem;
-                            }
+                        animation: slide-in 0.3s 0.2s ease-in-out forwards;
+                        span {
+                            font-size: 55px;
+                            font-weight: 700;
+                            display: block;
                         }
                     }
                 }
+            }
 
-                .card-shape {
-                    opacity: 0.8;
-                    transform: translateY(4rem) scale(0.9);
+            .icon {
+                position: absolute;
+                z-index: -1;
+                pointer-events: none;
+                top: 30%;
+                animation: float-shapes 10s ease infinite alternate-reverse;
+                opacity: 0.8;
 
-                    animation: card-shape 4s ease-in-out infinite alternate-reverse;
+                transition: opacity 0.4s ease-in-out;
 
-                    &__mark {
+                &--map {
+                    left: 12rem;
+                }
+
+                &--search {
+                    right: 12rem;
+                    animation-delay: 0.5s;
+                }
+
+                @media screen and (max-width: 992px) {
+                    opacity: 0.4;
+                    width: 15rem;
+                    height: 15rem;
+                    top: initial;
+
+                    &--map {
+                        left: 3rem;
+                        bottom: 3rem;
                     }
 
-                    &__pin {
+                    &--search {
+                        bottom: 3rem;
+                        right: 3rem;
+                    }
+                }
+            }
+
+            &[data-state="results"] {
+                .icon {
+                    opacity: 0;
+                }
+
+                .placeholder__content {
+                    transform: translateX(-25%);
+
+                    @media screen and (max-width: 992px) {
+                        transform: translatey(45%);
+                    }
+
+                }
+                .placeholder__results {
+                    transform: translateX(0%);
+
+                    
+
+                    ul {
+                        li {
+                            animation-play-state: running;
+                        }
                     }
                 }
             }
         }
-    }
-}
 
-@keyframes card-shape {
-    25% {
-        transform: translateY(8rem) scale(0.6) rotate(6deg);
-    }
+        &::before {
+            content: "";
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 500%;
+            opacity: 0.5;
+            background-color: white;
 
-    75% {
-        transform: translateY(-8rem) scale(0.7) rotate(-6deg);
-    }
-    100% {
-        transform: translateY(6rem) scale(0.7);
-        opacity: 0.4;
+            background-image: url(../../assets/img/world.svg);
+            background-repeat: repeat;
+
+            animation-name: sideupscroll;
+            animation-duration: 240s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+        }
+
+        // Infinite Background
+        @keyframes sideupscroll {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes float-shapes {
+            25% {
+                transform: scale(1) translate(1rem, 2rem);
+            }
+
+            50% {
+                transform: scale(0.9) translate(-1rem, -1rem);
+            }
+
+            100% {
+                transform: scale(1) translate(0rem, 0rem);
+            }
+        }
+
+        @keyframes slide-in {
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
     }
 }

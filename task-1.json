@@ -1,33 +1,32 @@
 {
     "name": {
-        "first": "steve",
-        "last": "fisher"
+        "first": "Steve",
+        "last": "Fisher"
     },
     "address": {
-        "city": "new york"
+        "city": "New York"
     },
     "status": "married",
     "partner": {
-        "name": "mary"
+        "name": "Mary"
     },
-    "kids": {
-        "number": 3,
-        "boys": {
-            "names": {
-                "john": {
-                    "age": 8
-                },
-                "will": {
-                    "age": 4
-                }
-            }
+    "children": [
+        {
+            "name": "John",
+            "gender": "male",
+            "age": 8
         },
-        "girls": {
-                "michelle": {
-                    "age": 2
-                }
+        {
+            "name": "Will",
+            "gender": "male",
+            "age": 4
+        },
+        {
+            "name": "Michelle",
+            "gender": "female",
+            "age": 2
         }
-    },
+    ],
     "job": {
         "location": "mtv",
         "position": "marketing director",
