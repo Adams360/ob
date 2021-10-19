@@ -321,7 +321,7 @@ body {
   width: 500%;
   opacity: 0.5;
   background-color: white;
-  background-image: url(../../assets/img/world.svg);
+  background-image: url(../assets/img/world.svg);
   background-repeat: repeat;
   animation-name: sideupscroll;
   animation-duration: 240s;
@@ -434,7 +434,7 @@ body {
   margin: 0 auto;
   padding: 42px 119px 100px 121px;
   background-repeat: no-repeat;
-  background-image: url(../../assets/img/laptop-placeholder.png);
+  background-image: url(../assets/img/laptop-placeholder.png);
   background-position: 0 0;
 }
 .task--4 .app .display__screen {
@@ -457,7 +457,7 @@ body {
   opacity: 1;
 }
 .task--4 .app .display__screen__website {
-  background-image: url(../../assets/img/laptop-content-cnn.png);
+  background-image: url(../assets/img/laptop-content-cnn.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -468,7 +468,7 @@ body {
   height: 100%;
 }
 .task--4 .app .display__screen__widget {
-  background-image: url(../../assets/img/laptop-content-static.png);
+  background-image: url(../assets/img/laptop-content-static.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   position: absolute;
@@ -489,12 +489,12 @@ body {
   opacity: 1;
 }
 .task--4 .app .display__screen__img--default {
-  background-image: url(../../assets/img/desktop-content-image.png);
+  background-image: url(../assets/img/desktop-content-image.png);
   transition: opacity 0.3s ease;
 }
 .task--4 .app .display__screen__img--loading {
   background-color: #f08421;
-  background-image: url(../../assets/img/preloader.gif);
+  background-image: url(../assets/img/preloader.gif);
   transition: opacity 0.3s ease;
 }
 .task--4 .app .display__screen__title {
